@@ -1,0 +1,46 @@
+@import "bootstrap";
+$mainColor: #3A8FFF;
+
+.bg-mainColor {
+    background-color: $mainColor;
+}
+
+.border-mainColor {
+    border-color: $mainColor;
+}
+
+nav {
+    @extend .bg-mainColor;
+    a {
+        @extend .ms-1;
+        color: white;
+    }
+}
+
+.navbar-nav {
+    a {
+        color: white;
+    }
+}
+
+// Página principal
+#main-page{
+    @extend .d-flex, .flex-column, .justify-content-center, .p-5;
+    article {
+        border: 3px solid $mainColor;
+        //border-color: ;
+        border-radius: 21px;
+        #title {
+            @extend .d-flex, .flex-row, .justify-content-center, .gap-3, .bg-mainColor, .align-items-center, .h1, .m-0;
+            color: white;
+            border-radius: 14px;
+            #arrow-hide-content {
+                display: none;
+            }
+        }
+        #grid-container {
+            display: none;
+            @extend .container-fluid, .row, .row-cols-3;
+        }
+    }
+}
